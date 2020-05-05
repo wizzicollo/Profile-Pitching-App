@@ -1,0 +1,6 @@
+Hello {{user.author}},
+
+Welcome to No more than 6oSecs
+
+We have been notified of your interest in our application, for signing up, Thank You! Most Welcome
+
