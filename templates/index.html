@@ -1,0 +1,68 @@
+{% extends 'base.html'%}
+{% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %}
+{% block content %}
+
+<body class="container">
+  <br>
+  <div class="d-flex justify-content-center">
+    <div class="card-groups">
+      <div class="card border-info mb-3" style="max-width: 35rem;">
+        <div class="card-header">Wisdom</div>
+        <div class="card-body text-info">
+          <h5 class="card-title">Wise us all</h5>
+          <p class="card-text">And the Wise Panda Once Said ...</p>
+          <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+          <button type="button" class="btn btn-outline-primary"><a href="/categories/wisdom">Read Pitches</a></button>
+        </div>
+      </div>
+
+      <div class="card border-info mb-3" style="max-width: 35rem;">
+        <div class="card-header">Philosophy</div>
+        <div class="card-body text-info">
+          <h5 class="card-title">Philosophize</h5>
+          <p class="card-text">There Shall Come A Time ...</p>
+          <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+          <button type="button" class="btn btn-outline-primary"><a href="/categories/philosophy">Read Pitches</a></button>
+        </div>
+      </div>
+
+      <div class="card border-info mb-3" style="max-width: 35rem;">
+        <div class="card-header">Love</div>
+        <div class="card-body text-info">
+          <h5 class="card-title">Is This Love?</h5>
+          <p class="card-text">It Feels Good To Be In Love, Or not?</p>
+          <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+          <button type="button" class="btn btn-outline-primary"><a href="/categories/love">Read Pitches</a></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="card border-info mb-3" style="max-width: 35rem;">
+    <div class="card-header">Are You A Coder?</div>
+    <div class="card-body text-info">
+      <h5 class="card-title">Lets Code</h5>
+      <p class="card-text">Machine Code Is Easy, Or is it?</p>
+      <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+      <button type="button" class="btn btn-outline-primary"><a href="/categories/coding">Read Pitches</a></button>
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="card border-info mb-3" style="max-width: 35rem;">
+  <div class="card-header">Funny</div>
+  <div class="card-body text-info">
+    <h5 class="card-title">Funny Pitches</h5>
+    <p class="card-text">Funny, or Funny?</p>
+    <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+    <button type="button" class="btn btn-outline-primary"><a href="/categories/funny">Read Pitches</a></button>
+  </div>
+</div>
+
+</div>
+</div>
+
+  {% endblock%}
+</body>
