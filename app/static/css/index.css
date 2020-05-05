@@ -1,0 +1,10 @@
+.container{
+    align-items: center;
+    color: gold;
+    background-color:black;
+    text-align: center;
+    font-weight: bold;
+    grid-template-columns: unset;
+  }
+/* 
+ 
