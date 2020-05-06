@@ -17,7 +17,7 @@ bootstrap = Bootstrap()
 db = SQLAlchemy()
 photos = UploadSet('photos', IMAGES)
 mail = Mail()
-create_engine = create_engine('postgresql+psycopg2://root:123456@localhost/pitchit')
+create_engine = create_engine('postgresql+psycopg2://collins:qwertyui@localhost/pitchhs')
 
 
 
