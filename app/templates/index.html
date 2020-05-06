@@ -3,31 +3,95 @@
 <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %}
 {% block content %}
 
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Pitch-It in a skip of a heartbeat!!</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: black" style="width:auto" ></div>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+       
+        <li class="nav-item active">
+          <li><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categories/wisdom">Wisdom</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" href="/categories/love">Love</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categories/philosophy">Philosophy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/categories/coding">Coding</a>
+        </li>
+      </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          {% if current_user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('main.profile',uname=current_user.author)}}">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('auth.logout')}}">Sign out</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('auth.login')}}">Sign in</a>
+          </li>
+          {%endif%}
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+
 <body class="container">
+  <br>
+  <br>
   <br>
   <div class="d-flex justify-content-center">
     <div class="card-groups">
-      <div class="card border-info mb-3" style="max-width: 35rem;">
+      <div class="card border-info mb-3" style="max-width: 90rem;">
         <div class="card-header">Wisdom</div>
         <div class="card-body text-info">
           <h5 class="card-title">Wise us all</h5>
           <p class="card-text">And the Wise Panda Once Said ...</p>
-          <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+          <button type="button" class="btn btn-outline-success"><a href="../pitch/">Add Pitch</a></button>
           <button type="button" class="btn btn-outline-primary"><a href="/categories/wisdom">Read Pitches</a></button>
         </div>
       </div>
 
-      <div class="card border-info mb-3" style="max-width: 35rem;">
+      <br>
+      <br>
+      <br>
+
+      <div class="card border-info mb-3" style="max-width: 90rem;">
         <div class="card-header">Philosophy</div>
         <div class="card-body text-info">
           <h5 class="card-title">Philosophize</h5>
           <p class="card-text">There Shall Come A Time ...</p>
           <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
-          <button type="button" class="btn btn-outline-primary"><a href="/categories/philosophy">Read Pitches</a></button>
+          <button type="button" class="btn btn-outline-primary"><a href="/categories/philosophy">Read
+              Pitches</a></button>
         </div>
       </div>
 
-      <div class="card border-info mb-3" style="max-width: 35rem;">
+      <br>
+      <br>
+      <br>
+
+      <div class="card border-info mb-3" style="max-width: 90rem;">
         <div class="card-header">Love</div>
         <div class="card-body text-info">
           <h5 class="card-title">Is This Love?</h5>
@@ -37,9 +101,13 @@
         </div>
       </div>
 
+      <br>
+      <br>
+      <br>
+
     </div>
   </div>
-  <div class="card border-info mb-3" style="max-width: 35rem;">
+  <div class="card border-info mb-3" style="max-width: 90rem;">
     <div class="card-header">Are You A Coder?</div>
     <div class="card-body text-info">
       <h5 class="card-title">Lets Code</h5>
@@ -49,20 +117,25 @@
     </div>
   </div>
 
-</div>
-</div>
-<div class="card border-info mb-3" style="max-width: 35rem;">
-  <div class="card-header">Funny</div>
-  <div class="card-body text-info">
-    <h5 class="card-title">Funny Pitches</h5>
-    <p class="card-text">Funny, or Funny?</p>
-    <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
-    <button type="button" class="btn btn-outline-primary"><a href="/categories/funny">Read Pitches</a></button>
-  </div>
-</div>
+  <br>
+  <br>
+  <br>
 
-</div>
-</div>
+  </div>
+  </div>
+  <div class="card border-info mb-3" style="max-width: 90rem;">
+    <div class="card-header">Funny</div>
+    <div class="card-body text-info">
+      <h5 class="card-title">Funny Pitches</h5>
+      <p class="card-text">Funny, or Funny?</p>
+      <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+      <button type="button" class="btn btn-outline-primary"><a href="/categories/funny">Read Pitches</a></button>
+    </div>
+  </div>
+
+  </div>
+  </div>
+ 
 
   {% endblock%}
 </body>

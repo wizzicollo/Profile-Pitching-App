@@ -1,7 +1,12 @@
 {% extends 'base.html'%}
 {% import "bootstrap/wtf.html" as wtf %}
 {% block styles%} {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/categories.css')}}"> {% endblock %}
+
+<link rel="stylesheet" href="{{url_for('static',filename='css/categories.css')}}"> 
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+
+{% endblock %}
 <br>
 <br>
 <br>
@@ -11,7 +16,10 @@
   {% block content %}
   <br>
   <br>
-  <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+  <br>
+  <br>
+ 
+  <button type="button" class="btn btn-secondary"><a href="../pitch/"><button type="button" class="btn btn-warning">+ Add Pitch</a></button>
   <div class="container">
     <div class="card-columns">
       {% for category in category[::-1] %}
@@ -28,9 +36,13 @@
           </blockquote>
         </div>
         <div class="card-footer bg-transparent border-success">
-          <button type="button" class="btn btn-outline-success btn-sm"><a href="/new_comment/{{category.id}}">Comment</a></button> <button type="button" class="btn btn-outline-success btn-sm"><a href="/comments/{{category.id}}">View comments</a></button></div>
-      </div>
-
+          <button type="button" class="btn btn-outline-success btn-sm"><a href="/new_comment/{{category.id}}"><button type="button" class="btn btn-success">Comment</a></button> <button type="button" class="btn btn-outline-success btn-sm">
+            <a href="/comments/{{category.id}}"><button type="button" class="btn btn-info">View comments</a></button> <button type="button" class="btn btn-danger">Delete</button> <i type="button" class="fas fa-thumbs-up" style='color:red'></i>
+                               <i type="button" class="fas fa-thumbs-up" style='color:black'></i>
+                  
+                  </div>
+              </div>
+          </div>
       {% endfor %}
       
     </div>
