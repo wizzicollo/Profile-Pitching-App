@@ -25,7 +25,6 @@ class User(UserMixin, db.Model):
     def password(self):
         raise AttributeError("Permission denied")
 
-    @password.setter
     def password(self, password):
         self.password_hash = generate_password_hash(password)
 
